@@ -372,7 +372,11 @@ static struct ctl_table net_core_table[] = {
 		.data		= &bpf_jit_enable,
 		.maxlen		= sizeof(int),
 		.mode		= 0644,
+<<<<<<< HEAD
 		.proc_handler	= proc_dointvec_minmax_bpf_enable,
+=======
+		.proc_handler	= proc_dointvec_minmax,
+>>>>>>> 234646dcfc5f (bpf: get rid of pure_initcall dependency to enable jits)
 # ifdef CONFIG_BPF_JIT_ALWAYS_ON
 		.extra1		= &one,
 		.extra2		= &one,
@@ -387,7 +391,11 @@ static struct ctl_table net_core_table[] = {
 		.data		= &bpf_jit_harden,
 		.maxlen		= sizeof(int),
 		.mode		= 0600,
+<<<<<<< HEAD
 		.proc_handler	= proc_dointvec_minmax_bpf_restricted,
+=======
+		.proc_handler	= proc_dointvec_minmax,
+>>>>>>> 234646dcfc5f (bpf: get rid of pure_initcall dependency to enable jits)
 		.extra1		= &zero,
 		.extra2		= &two,
 	},
@@ -396,7 +404,11 @@ static struct ctl_table net_core_table[] = {
 		.data		= &bpf_jit_kallsyms,
 		.maxlen		= sizeof(int),
 		.mode		= 0600,
+<<<<<<< HEAD
 		.proc_handler	= proc_dointvec_minmax_bpf_restricted,
+=======
+		.proc_handler	= proc_dointvec_minmax,
+>>>>>>> 234646dcfc5f (bpf: get rid of pure_initcall dependency to enable jits)
 		.extra1		= &zero,
 		.extra2		= &one,
 	},
